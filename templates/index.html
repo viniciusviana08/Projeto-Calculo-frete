@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Cálculo de Frete</title>
+</head>
+<body>
+    <header>
+        <h1>Cálculo de Frete</h1>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Calcule o valor do frete</h2>
+            <form method="POST">
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep" required>
+                <label for="peso">Peso (em gramas):</label>
+                <input type="number" id="peso" name="peso" required>
+                <button type="submit">Calcular</button>
+            </form>
+            {% if frete %}
+                <p>O valor do frete para {{street}}, {{city}} {{state}} (Região: {{ regiao }}) é: R$ {{ frete }}</p>
+            {% elif error %}
+                <p>{{ error }}</p>
+            {% endif %}
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Cálculo de Frete. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
