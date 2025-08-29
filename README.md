@@ -1,55 +1,76 @@
-# Projeto Cálculo de Frete
+# 🚚 Calculadora de Frete
 
-Este projeto é uma aplicação web para calcular o valor do frete com base no CEP e no peso do pacote. A aplicação utiliza a API BrasilAPI para obter informações sobre o endereço a partir do CEP fornecido.
+![Badge Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Badge Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+![Badge TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-## Tecnologias Utilizadas
+Uma aplicação web moderna e responsiva para calcular custos de frete com base no CEP e peso da encomenda. O projeto foi desenvolvido com Python e Flask no backend e estilizado com Tailwind CSS para uma interface elegante e intuitiva.
 
-- Python
-- Flask
-- HTML/CSS
-- Requests (biblioteca Python para fazer requisições HTTP)
+[![Deploy with Vercel](https://vercel.com/button)](https://projeto-calculo-frete.vercel.app/)
 
-## Estrutura do Projeto
+---
 
-- `app.py`: Arquivo principal da aplicação Flask.
-- `templates/index.html`: Template HTML para a interface do usuário.
-- `static/style.css`: Arquivo CSS para estilização da página (se necessário).
+## 🚀 Acesso ao Projeto
 
-## Como Executar o Projeto
+Você pode testar a aplicação em tempo real através do link de deploy na Vercel:
 
-1. Clone o repositório para sua máquina local.
-2. Navegue até o diretório do projeto.
-3. Crie um ambiente virtual e ative-o:
+**[https://projeto-calculo-frete.vercel.app/](https://projeto-calculo-frete.vercel.app/)**
+
+
+## ✨ Funcionalidades Principais
+
+-   **Consulta de CEP:** Integração com a [BrasilAPI](https://brasilapi.com.br/) para buscar o endereço completo (rua, cidade e estado) de forma automática.
+-   **Cálculo por Região:** O valor do frete é determinado pela região do país (Norte, Nordeste, Sudeste, Sul e Centro-Oeste) correspondente ao CEP informado.
+-   **Interface Moderna:** Design limpo e agradável, totalmente responsivo, que se adapta a desktops e dispositivos móveis, construído com Tailwind CSS.
+-   **Feedback Instantâneo:** O resultado do cálculo ou mensagens de erro são exibidos dinamicamente na mesma página, proporcionando uma excelente experiência de usuário.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+-   **Backend:** Python 3, Flask
+-   **Frontend:** HTML, Tailwind CSS (via CDN)
+-   **API Externa:** BrasilAPI para consulta de CEP
+-   **Hospedagem:** Vercel
+
+---
+
+## ⚙️ Como Executar o Projeto Localmente
+
+Siga os passos abaixo para rodar a aplicação em sua máquina:
+
+1.  **Clone este repositório:**
     ```bash
+    git clone https://github.com/viniciusviana08/Projeto-Calculo-frete.git
+    cd Projeto-Calculo-frete
+    ```
+
+2.  **Crie e ative um ambiente virtual (recomendado):**
+    ```bash
+    # Para Windows
     python -m venv venv
-    source venv/bin/activate  # No Windows use `venv\Scripts\activate`
+    venv\Scripts\activate
+
+    # Para macOS/Linux
+    python3 -m venv venv
+    source venv/bin/activate
     ```
-4. Instale as dependências necessárias:
+
+3.  **Instale as dependências necessárias:**
     ```bash
-    pip install flask requests
+    pip install -r requirements.txt
     ```
-5. Execute a aplicação:
+
+4.  **Execute a aplicação Flask:**
     ```bash
     python app.py
     ```
-6. Abra seu navegador e acesse `http://127.0.0.1:5000`.
 
-## Como Usar
+5.  **Acesse no seu navegador:**
+    Abra o endereço [http://127.0.0.1:5000](http://127.0.0.1:5000) e comece a usar!
 
-1. Insira o CEP e o peso do pacote no formulário.
-2. Clique no botão "Calcular".
-3. O valor do frete será exibido na tela, juntamente com as informações do endereço.
+---
 
-## Estrutura de Preços
+## 👨‍💻 Autor
 
-Os preços são calculados com base na região do estado de destino:
-
-- Sudeste: R$ 5,00 por 100g
-- Sul: R$ 6,00 por 100g
-- Centro-Oeste: R$ 7,00 por 100g
-- Nordeste: R$ 8,00 por 100g
-- Norte: R$ 10,00 por 100g
-
-## Licença
-
-Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Desenvolvido por Vinícius Viana. 
